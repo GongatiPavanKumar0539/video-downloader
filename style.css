@@ -1,0 +1,91 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+    color: #172033;
+}
+
+.card {
+    width: 100%;
+    max-width: 560px;
+    padding: 32px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px #0001;
+}
+
+.logo {
+    background: #e62117;
+    color: white;
+    width: 50px;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #e62117;
+    color: white;
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.6;
+}
+
+#thumbnail {
+    width: 100%;
+    border-radius: 10px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.download-progress {
+    margin-top: 16px;
+    width: 100%;
+}
+
+.progress-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #2563eb;
+    border-radius: 10px;
+    transition: width 1s linear;
+}

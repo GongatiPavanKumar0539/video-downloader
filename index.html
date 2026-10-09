@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <div class="logo">▶</div>
+        <h1>Video Downloader</h1>
+        <p>Paste a YouTube link to preview the video.</p>
+
+        <form id="videoForm">
+            <input
+                type="url"
+                id="videoUrl"
+                placeholder="Paste YouTube URL here"
+                required
+            >
+            <button type="submit" id="previewBtn">
+                Get Video Details
+            </button>
+        </form>
+
+        <p id="status" role="status"></p>
+
+        
+<section id="preview" hidden>
+    <img id="thumbnail" alt="Video thumbnail">
+    <h2 id="videoTitle"></h2>
+    <p id="duration"></p>
+
+    <div class="quality-section">
+        <label for="videoQuality">Select Video Quality:</label>
+        <select id="videoQuality">
+            <option value="360">360p</option>
+            <option value="480">480p</option>
+            <option value="720">720p</option>
+            <option value="1080">1080p (Full HD)</option>
+            <option value="1440">1440p (2K)</option>
+            <option value="2160">2160p (4K)</option>
+            <option value="best">Best Available</option>
+        </select>
+    </div>
+
+    
+<button id="downloadBtn" type="button">
+    Download MP4
+</button>
+
+<div id="downloadProgress" class="download-progress" hidden>
+    <div class="progress-info">
+        <span id="progressMessage">Preparing download...</span>
+        <span id="progressTime">10s</span>
+    </div>
+    <div class="progress-track">
+        <div id="progressBar" class="progress-bar"></div>
+    </div>
+</div>
+</section>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
