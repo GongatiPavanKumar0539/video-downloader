@@ -66,7 +66,8 @@ def video_info():
         with YoutubeDL({
             "quiet": True,
             "noplaylist": True,
-            "skip_download": True
+            "skip_download": True,
+            "js_runtimes": {"deno": {}}
         }) as ydl:
             info = ydl.extract_info(url, download=False)
 
