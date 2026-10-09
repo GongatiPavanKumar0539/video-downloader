@@ -7,6 +7,7 @@ import tempfile
 import shutil
 from flask_cors import CORS
 import os
+import imageio_ffmpeg
 
 
 app = Flask(__name__)
@@ -30,7 +31,7 @@ ALLOWED_HOSTS = {
 ALLOWED_QUALITIES = {"360", "480", "720", "1080", "1440", "2160", "best"}
 
 
-FFMPEG_PATH = os.environ.get("FFMPEG_PATH", "ffmpeg")
+FFMPEG_PATH = os.environ.get("FFMPEG_PATH") or imageio_ffmpeg.get_ffmpeg_exe()
 
 
 
