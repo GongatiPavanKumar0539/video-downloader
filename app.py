@@ -16,7 +16,8 @@ CORS(app, resources={
     r"/api/*": {
         "origins": [
             "http://127.0.0.1:5500",
-            "http://localhost:5500"
+            "http://localhost:5500",
+            "https://pavan-youtube-downloader-site.onrender.com"
         ]
     }
 })
