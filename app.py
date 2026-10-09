@@ -6,6 +6,8 @@ from pathlib import Path
 import tempfile
 import shutil
 from flask_cors import CORS
+import os
+
 
 app = Flask(__name__)
 
@@ -27,11 +29,9 @@ ALLOWED_HOSTS = {
 
 ALLOWED_QUALITIES = {"360", "480", "720", "1080", "1440", "2160", "best"}
 
-FFMPEG_PATH = (
-    r"C:\Users\pavan\AppData\Local\Microsoft\WinGet\Packages"
-    r"\Gyan.FFmpeg.Shared_Microsoft.Winget.Source_8wekyb3d8bbwe"
-    r"\ffmpeg-9.0.2-full_build-shared\bin"
-)
+
+FFMPEG_PATH = os.environ.get("FFMPEG_PATH", "ffmpeg")
+
 
 
 def valid_url(url):
