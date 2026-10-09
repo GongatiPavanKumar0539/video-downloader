@@ -31,7 +31,7 @@ ALLOWED_HOSTS = {
 
 ALLOWED_QUALITIES = {"360", "480", "720", "1080", "1440", "2160", "best"}
 
-
+os.environ["PATH"] = os.path.expanduser("~/.deno/bin") + os.pathsep + os.environ.get("PATH", "")
 FFMPEG_PATH = os.environ.get("FFMPEG_PATH") or imageio_ffmpeg.get_ffmpeg_exe()
 
 
