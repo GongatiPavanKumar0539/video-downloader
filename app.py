@@ -67,7 +67,7 @@ def video_info():
             "quiet": True,
             "noplaylist": True,
             "skip_download": True,
-            "js_runtimes": {"deno": {}}
+            "js_runtimes": {"deno": {"path": "/opt/render/.deno/bin/deno"}}
         }) as ydl:
             info = ydl.extract_info(url, download=False)
 
