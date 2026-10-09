@@ -1,5 +1,5 @@
 
-const API = "http://127.0.0.1:5000";
+const API = "https://youtube-video-downloader-backend-api.onrender.com";
 
 const form = document.getElementById("videoForm");
 const urlInput = document.getElementById("videoUrl");
